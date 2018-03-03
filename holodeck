@@ -8,7 +8,7 @@ class Holodeck:
     #USE SQL
     import sqlite3
     #SELECT DATABASE
-    conn = sqlite3.connect("/home/ne1/bin/db/holodeckdb")
+    conn = sqlite3.connect("/home/ne1/code/holodeck/holodeckdb")
     db = conn.cursor()
 
     #CREATE TABLE
