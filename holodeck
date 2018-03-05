@@ -126,7 +126,7 @@ class Holodeck:
     #commands = raw_input("> ")
     import sys#using sys.exit to exit.
     while True:
-        db.execute("SELECT * FROM construct WHERE id=?",str(room))
+        db.execute("SELECT * FROM construct WHERE id=?",(str(room),))
         results = db.fetchall()
         for result in results:
             room = result[0]
