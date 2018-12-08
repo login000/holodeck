@@ -1,4 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
+
+dbpath = "/home/ne1/code/holodeck/holodeckdb"
 
 class Holodeck:
 
@@ -8,7 +10,7 @@ class Holodeck:
     #USE SQL
     import sqlite3
     #SELECT DATABASE
-    conn = sqlite3.connect("/home/ne1/code/holodeck/holodeckdb")
+    conn = sqlite3.connect(dbpath)
     db = conn.cursor()
 
     #CREATE TABLE
