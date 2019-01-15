@@ -1,4 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
+
+dbpath = "./holodeckdb"
 
 class Holodeck:
 
@@ -8,8 +10,12 @@ class Holodeck:
     #USE SQL
     import sqlite3
     #SELECT DATABASE
-    conn = sqlite3.connect("/home/ne1/code/holodeck/holodeckdb")
-    db = conn.cursor()
+    try:
+        conn = sqlite3.connect(dbpath)
+        db = conn.cursor()
+    except:
+        print "Unable to connect to database. Is the path accessible?"
+        quit()
 
     #CREATE TABLE
     emptydb = True
